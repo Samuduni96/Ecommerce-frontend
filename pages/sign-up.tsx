@@ -37,7 +37,7 @@ const SignIn = () => {
       <div className="min-h-screen flex items-center justify-center bg-gray-100">
         <div className="w-1/3 p-6 bg-white shadow-lg rounded-md">
           <h2 className=" font-semibold font-roboto text-center text-primary-darker text-2xl md:text-3xl mb-6">
-            Sign In with
+            Sign Up with
           </h2>
           <div className="flex justify-center space-x-4 mb-6">
             <button
@@ -88,6 +88,36 @@ const SignIn = () => {
           </div>
 
           <form>
+          <div className="mb-4">
+              <label
+                htmlFor="firstName"
+                className="block text-gray-700 font-medium mb-2"
+              >
+                First Name
+              </label>
+              <input
+                type="text"
+                id="fisrtName"
+                className="w-full px-4 py-2 border border-gray-300 rounded-none focus:outline-none focus:ring focus:ring-blue-300"
+                placeholder="Your First Name"
+                required
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="lastName"
+                className="block text-gray-700 font-medium mb-2"
+              >
+                Last Name
+              </label>
+              <input
+                type="text"
+                id="lastName"
+                className="w-full px-4 py-2 border border-gray-300 rounded-none focus:outline-none focus:ring focus:ring-blue-300"
+                placeholder="Your Last Name"
+                required
+              />
+            </div>
             <div className="mb-4">
               <label
                 htmlFor="email"
@@ -99,7 +129,7 @@ const SignIn = () => {
                 type="email"
                 id="email"
                 className="w-full px-4 py-2 border border-gray-300 rounded-none focus:outline-none focus:ring focus:ring-blue-300"
-                placeholder="you@example.com"
+                placeholder="youremail@gmail.com"
                 required
               />
             </div>
@@ -118,22 +148,17 @@ const SignIn = () => {
                 required
               />
             </div>
-            <div className="text-right mb-4">
-              <a href="#" className="hover:underline text-blue py-2">
-                Forgot Password?
-              </a>
-            </div>
             <div className="flex flex-col justify-end  flex-grow space-y-2">
               <Button fullWidth type="submit">
-                Sign In
+                Sign Up
               </Button>
               <div className="text-black flex space-x-2 justify-center">
-                <p>Don&lsquo;t have an account?</p>
+                <p>Already have an account?</p>
                 <Link
-                  href="/sign-up"
+                  href="/sign-in"
                   className="font-semibold text-primary-darkblue hover:text-primary-dark transition ease-in"
                 >
-                  Sign Up
+                  Sign In
                 </Link>
               </div>
             </div>
